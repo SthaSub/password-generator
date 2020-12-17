@@ -111,18 +111,17 @@ function generatePassword() {
     }
     validateSelect = validation(checkerType, "selectionValidation");
   }
-  console.log(checkerType);
   return generator(checkerType);
 }
 
 // core function of generating the password
-function generator(checkerType) {
+function generator(checkerTypeArgs) {
   var newPassword = "";
   var checkerArray = [];
   //appending the selected type of characters by user into checkerArray
-  for (i = 0; i < Object.values(checkerType).length; i++) {
-    if (Object.values(checkerType)[i] != "")
-      checkerArray.push(Object.values(checkerType)[i]);
+  for (i = 0; i < Object.values(checkerTypeArgs).length; i++) {
+    if (Object.values(checkerTypeArgs)[i] != "")
+      checkerArray.push(Object.values(checkerTypeArgs)[i]);
   }
   // variable for storing random value of type of characters such as numeric or uppercase or etc.
   var randomValue;
@@ -138,5 +137,6 @@ function generator(checkerType) {
       newPassword = newPassword + getUppercaseChars();
     }
   }
+  checkerType = {}; //clearing the object previous values
   return newPassword;
 }
