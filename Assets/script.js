@@ -40,3 +40,7 @@ function getUppercaseChars() {
 function getLowercaseChars() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
+
+function getNumericValue() {
+  return Math.floor(Math.random() * 10);
+}
