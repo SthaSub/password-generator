@@ -15,7 +15,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 var getPasswordLength = 0;
- 
+
 var isUppercase;
 var isLowercase;
 var isSpecialchar;
@@ -33,7 +33,10 @@ var specialChars = ["\u0020", "\u0021", "\u0022", "\u0023", "\u0024", "\u0025",
   "\u003A", "\u003B", "\u003C", "\u003D", "\u003E", "\u003F", "\u0040", "\u005B", "\u005C", "\u005D",
   "\u005E", "\u005F", "\u0060", "\u007B", "\u007C", "\u007D", "\u007E"];
 
-  function getUppercaseChars() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-  }
-  
+function getUppercaseChars() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function getLowercaseChars() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
