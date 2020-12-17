@@ -119,13 +119,13 @@ function generator(checkerTypeArgs) {
   var newPassword = "";
   var checkerArray = [];
   //appending the selected type of characters by user into checkerArray
-  for (i = 0; i < Object.values(checkerTypeArgs).length; i++) {
+  for (var i = 0; i < Object.values(checkerTypeArgs).length; i++) {
     if (Object.values(checkerTypeArgs)[i] != "")
       checkerArray.push(Object.values(checkerTypeArgs)[i]);
   }
   // variable for storing random value of type of characters such as numeric or uppercase or etc.
   var randomValue;
-  for (i = 0; i < parseInt(getPasswordLength); i++) {
+  for (var j = 0; j < parseInt(getPasswordLength); j++) {
     randomValue = checkerArray[Math.floor(Math.random() * checkerArray.length)]; // gets the random character type
     if (randomValue === "numeric") {
       newPassword = newPassword + getNumericValue();
