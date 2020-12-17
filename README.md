@@ -26,6 +26,8 @@ Application overview showing numbers of steps to achieve random secure password
 5. Number selection confirm
 ![Choose Number](./assets/images/number.JPG)
 
+6. New Password
+![Result New Password](./assets/images/newpassword.JPG) 
 # For Future enhacement
 
 The application can be enhanced by adding more features including using of Angular or react framework. 
