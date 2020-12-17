@@ -49,3 +49,23 @@ function getSpecialChars() {
   return Math.floor(Math.random() * 33);
 }
 
+function validation(validationParameter, validationType) {
+  if (validationType === "numberValidation") {
+    if ((validationParameter < 8 || validationParameter > 128) || isNaN(validationParameter)) {
+      alert("Please enter valid number, length range, at least 8 or maximum to 128 ");
+      return true;
+    } else {
+      return false;
+    }
+  } else if (validationType === "selectionValidation") {
+    if (validationParameter.uppercase === "uppercase" ||
+      validationParameter.lowercase === "lowercase" || validationParameter.specialchar === "specialchar"
+      || validationParameter.number === "numeric") {
+      return false;
+    } else {
+      alert("Remember, Please select any one type.");
+      return true;
+    }
+  }
+}
+
