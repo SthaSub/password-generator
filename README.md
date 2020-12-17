@@ -28,7 +28,8 @@ Application overview showing numbers of steps to achieve random secure password
 
 6. New Password
 ![Result New Password](./assets/images/newpassword.JPG) 
+
 # For Future enhacement
 
-The application can be enhanced by adding more features including using of Angular or react framework. 
+The application can be enhanced by adding more features by using Angular or react or other frontend framework. 
 
