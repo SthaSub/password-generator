@@ -99,3 +99,28 @@ function generatePassword() {
   console.log(checkerType);
   return generator(checkerType);
 }
+
+function generator(checkerType) {
+  var newPassword = "";
+  var checkerArray = [];
+  //appending the selected type of characters by user into checkerArray
+  for (i = 0; i < Object.values(checkerType).length; i++) {
+    if (Object.values(checkerType)[i] != "")
+      checkerArray.push(Object.values(checkerType)[i]);
+  }
+  // variable for storing random value of type of characters such as numeric or uppercase or etc.
+  var randomValue;
+  for (i = 0; i < parseInt(getPasswordLength); i++) {
+    randomValue = checkerArray[Math.floor(Math.random() * checkerArray.length)]; // gets the random character type
+    if (randomValue === "numeric") {
+      newPassword = newPassword + getNumericValue();
+    } else if (randomValue === "specialchar") {
+      newPassword = newPassword + specialChars[getSpecialChars()]; // gets the random special character from special chars array
+    } else if (randomValue === "lowercase") {
+      newPassword = newPassword + getLowercaseChars();
+    } else if (randomValue === "uppercase") {
+      newPassword = newPassword + getUppercaseChars();
+    }
+  }
+  return newPassword;
+}
