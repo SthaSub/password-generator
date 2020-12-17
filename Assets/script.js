@@ -14,13 +14,20 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
+/**
+ * Implementation of password logic begins here
+ */
+
+// int type of variable to store input password length 
 var getPasswordLength = 0;
 
+// variable used for user confirmation 
 var isUppercase;
 var isLowercase;
 var isSpecialchar;
 var isNumeric;
 
+// object initialise for checking of each type user selected
 var checkerType = {
   uppercase: "",
   lowercase: "",
@@ -28,27 +35,34 @@ var checkerType = {
   number: ""
 };
 
+//hex unicode of special characters initialised in array
+//unicode reference from https://www.owasp.org/index.php/Password_special_characters
 var specialChars = ["\u0020", "\u0021", "\u0022", "\u0023", "\u0024", "\u0025",
   "\u0026", "\u0027", "\u0028", "\u0029", "\u002A", "\u002B", "\u002C", "\u002D", "\u002E", "\u002F",
   "\u003A", "\u003B", "\u003C", "\u003D", "\u003E", "\u003F", "\u0040", "\u005B", "\u005C", "\u005D",
   "\u005E", "\u005F", "\u0060", "\u007B", "\u007C", "\u007D", "\u007E"];
 
+// gets Uppercase letter from random unicode
 function getUppercaseChars() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 
+// gets lowercase letter from random unicode
 function getLowercaseChars() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
+// gets random number from 0 to 9
 function getNumericValue() {
   return Math.floor(Math.random() * 10);
 }
 
+//gets random number to generate random special character from specialChars
 function getSpecialChars() {
   return Math.floor(Math.random() * 33);
 }
 
+// validation of user input character length and character selection type
 function validation(validationParameter, validationType) {
   if (validationType === "numberValidation") {
     if ((validationParameter < 8 || validationParameter > 128) || isNaN(validationParameter)) {
@@ -69,6 +83,7 @@ function validation(validationParameter, validationType) {
   }
 }
 
+// Control function including user input with validation and generates the random password
 function generatePassword() {
   var validateInput = true; //used for validating user input
   while (validateInput) {
@@ -100,6 +115,7 @@ function generatePassword() {
   return generator(checkerType);
 }
 
+// core function of generating the password
 function generator(checkerType) {
   var newPassword = "";
   var checkerArray = [];
