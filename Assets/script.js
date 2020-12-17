@@ -44,3 +44,8 @@ function getLowercaseChars() {
 function getNumericValue() {
   return Math.floor(Math.random() * 10);
 }
+
+function getSpecialChars() {
+  return Math.floor(Math.random() * 33);
+}
+
