@@ -10,15 +10,21 @@ to see running application simply go through this link : [password generator](ht
 
 # screenshots
 Application overview showing numbers of steps to achieve random secure password
-1. ![Enter password length](./assets/images/length.JPG)
 
-2. ![Choose Uppercase](./assets/images/uppercase.JPG)
+1. Length of Password prompt
+![Enter password length](./assets/images/length.JPG)
 
-3. ![Choose Lowercase](./assets/images/lower.JPG)
+2. Uppercase selection confirm
+![Choose Uppercase](./assets/images/uppercase.JPG)
 
-4. ![Choose Special Symbol](./assets/images/special.JPG)
+3. Lowercase selection confirm
+![Choose Lowercase](./assets/images/lower.JPG)
 
-5. ![Choose Number](./assets/images/number.JPG)
+4. Special character selection confirm
+![Choose Special Symbol](./assets/images/special.JPG)
+
+5. Number selection confirm
+![Choose Number](./assets/images/number.JPG)
 
 # For Future enhacement
 
