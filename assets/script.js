@@ -37,7 +37,7 @@ var checkerType = {
 
 //hex unicode of special characters initialised in array
 //unicode reference from https://www.owasp.org/index.php/Password_special_characters
-var specialChars = ["\u0020", "\u0021", "\u0022", "\u0023", "\u0024", "\u0025",
+var specialChars = ["\u0021", "\u0022", "\u0023", "\u0024", "\u0025",
   "\u0026", "\u0027", "\u0028", "\u0029", "\u002A", "\u002B", "\u002C", "\u002D", "\u002E", "\u002F",
   "\u003A", "\u003B", "\u003C", "\u003D", "\u003E", "\u003F", "\u0040", "\u005B", "\u005C", "\u005D",
   "\u005E", "\u005F", "\u0060", "\u007B", "\u007C", "\u007D", "\u007E"];
@@ -59,7 +59,7 @@ function getNumericValue() {
 
 //gets random number to generate random special character from specialChars
 function getSpecialChars() {
-  return Math.floor(Math.random() * 33);
+  return Math.floor(Math.random() * 32);
 }
 
 // validation of user input character length and character selection type
