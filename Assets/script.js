@@ -69,3 +69,33 @@ function validation(validationParameter, validationType) {
   }
 }
 
+function generatePassword() {
+  var validateInput = true; //used for validating user input
+  while (validateInput) {
+    getPasswordLength = prompt("Enter your desire password length in number , it must be at least 8 or maximum 128",
+      "number inputs only");
+    validateInput = validation(parseInt(getPasswordLength), "numberValidation");
+  }
+  var validateSelect = true;
+  while (validateSelect) {
+    isUppercase = confirm("Do you want to add uppercase in password?");
+    if (isUppercase) {
+      checkerType.uppercase = "uppercase";
+    }
+    isLowercase = confirm("Do you want to add Lowercase in password?");
+    if (isLowercase) {
+      checkerType.lowercase = "lowercase";
+    }
+    isSpecialchar = confirm("Do you want to add any special charaters in password?");
+    if (isSpecialchar) {
+      checkerType.specialchar = "specialchar";
+    }
+    isNumeric = confirm("Do you want to include any number?");
+    if (isNumeric) {
+      checkerType.number = "numeric";
+    }
+    validateSelect = validation(checkerType, "selectionValidation");
+  }
+  console.log(checkerType);
+  return generator(checkerType);
+}
