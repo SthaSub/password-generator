@@ -6,7 +6,7 @@ The web application is consists of read, html, javascript, and css files, and it
 
 # deployment
 This application is deployed on github pages, 
-to see running application simply go through this link : ![password generator](./)
+to see running application simply go through this link : ![password generator](https://sthasub.github.io/password-generator/)
 
 # screenshots
 Application overview showing numbers of steps to achieve random secure password
@@ -20,6 +20,7 @@ Application overview showing numbers of steps to achieve random secure password
 
 5. ![Choose Number](./assets/images/number.JPG)
 
-# 
+# For Future enhacement
 
+The application can be enhanced by adding more features including using of Angular or react framework. 
 
